@@ -28,7 +28,7 @@ body {
   cursor: pointer;
   transform: scale(1);
   transform-style: preserve-3d; 
-  transition: transform 1.9s;
+  transition: transform 0.5s;
 }
 
 .card:hover {
@@ -38,7 +38,7 @@ body {
 
 .card:active {
   transform: scale(0.97);
-  transition: transform .3s;
+  transition: transform .5s;
 }
 
 .card-front, .card-back {
