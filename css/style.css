@@ -1,3 +1,11 @@
+:root {
+  --preto: #000000;
+  --branco: #ffffff;
+  --verde: #5cbb9b;
+  --verdeClaro: #bcf8e4;
+  --verdePastel: #aecfb4;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +15,7 @@
 body {
   height: 100vh;
   display: flex;
-  background-color: #36bdbd;
+  background-color: var(--verdePastel);
 }
 
 .memory-game {
@@ -24,7 +32,7 @@ body {
   width: calc(25% - 10px);
   margin: 5px;
   position: relative;
-  box-shadow: 1px 1px 1px #000;
+  box-shadow: 1px 1px 1px var(--preto);
   cursor: pointer;
   transform: scale(1);
   transform-style: preserve-3d; 
@@ -47,7 +55,7 @@ body {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #fff;
+  background: var(--verde);
   backface-visibility: hidden;
 }
 
@@ -56,5 +64,6 @@ body {
 }
 
 .card.flip {
+  box-shadow: 0 0 0 0;
   transform: rotateY(180deg);
 }
