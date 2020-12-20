@@ -1,7 +1,10 @@
 const cards = document.querySelectorAll('.card');
+
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+
+let flipCardSound=document.getElementById("flipCardSound");
 
 function flipCard() {
   if(lockBoard) return;
@@ -9,10 +12,12 @@ function flipCard() {
 
   this.classList.add('flip');
   if(!hasFlippedCard) {
-      hasFlippedCard = true;
-      firstCard = this;
-      return;
+    flipCardSound.play();
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
   }
+  flipCardSound.play();
   secondCard = this;
   hasFlippedCard = false;
   checkForMath();
