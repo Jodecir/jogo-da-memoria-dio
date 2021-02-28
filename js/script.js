@@ -3,8 +3,9 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
+let tries = 0;
 
-let flipCardSound=document.getElementById("flipCardSound");
+let flipCardSound = document.getElementById("flipCardSound");
 
 function flipCard() {
   if(lockBoard) return;
@@ -12,6 +13,8 @@ function flipCard() {
 
   this.classList.add('flip');
   if(!hasFlippedCard) {
+    tries++;
+    scoreboardRefresh();
     flipCardSound.play();
     hasFlippedCard = true;
     firstCard = this;
@@ -64,3 +67,7 @@ function resetBoard() {
 cards.forEach((card) => {
   card.addEventListener('click', flipCard);
 })
+
+function scoreboardRefresh() {
+  document.getElementById("tries").innerHTML = tries;
+}

@@ -67,3 +67,20 @@ body {
   box-shadow: 0 0 0 0;
   transform: rotateY(180deg);
 }
+
+.hud {
+  border: 2px solid var(--verdeClaro);
+  border-radius: 30px;
+  background-color: var(--verde);
+  color: var(--branco);
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 90px;
+  height: 55px;
+  padding: 15px;
+}
+
+.scoreboard {
+  font-size: 18px;
+}
